@@ -1,0 +1,30 @@
+{
+   "data":
+   
+   { "productos" : [
+        "Extintor",
+        "Recarga Extintor",
+        "Mantenimiento Extintor",
+        "Base Pared Extintor",
+        "Botiquin",
+        "Camilla",
+        "Caneca Des/Organicos"
+    ],
+    "tipo":{
+        "extintor": ["Multiproposito","Extintor Agente Limpio","CO2","Agua"],
+        "base":["Plastico PVC", "Metal"],
+        "botiquin":["Termico de 18 productos", "caja en PVC"],
+        "camilla":["Con Inmovilizador","Sin Inmovilizador"],
+        "caneca desechos organicos":["Ordinarios", "Plasticos","Papel y carton"]
+
+    },
+    "tamano":{
+        "multiproposito":["5 lbs","10 lbs","20 lbs"],
+        "agente":["2500 gr","3700 gr", "7000 gr"],
+        "CO2":["5 lbs"," 10 lbs","//"],
+        "camilla":["185 x 45"],
+        "caneca":["10 lts"]
+
+    }}
+    
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizemos </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body> 
+
+    <script src="index.js"></script>
+
+
+    <header>
+        <span>
+            <img class="logo" src="./logoSegInd.png" alt="logo">
+            <img class="menu" src="./menu.svg" alt="logo">
+
+        </span>
+
+        <nav>
+            <ul> 
+                <a href="">BIOSEGURIDAD</a>
+                <a href="">SENALIZACION</a>
+                <a href="">SEGURIDAD INDUSTRIAL</a>
+                <a href="">NOSOTROS</a>
+                <a href="/cotizador.html">COTIZAR</a>
+            </ul>
+
+        </nav>
+    </header>
+
+
+
+    
+    <main>
+        <section class="producto">
+            <div>
+                <label for="Producto">Elige un producto:</label> <br>
+                <select name="producto" id="producto" >
+                    <option value="placa">Placa</option>
+                    <option value="placa fotoluminiscente">Placa Fotoluminiscente</option>
+                    <option value="calcomania">Calcomania</option>
+                    <option value="marquillas">Marquillas</option>
+                </select>
+            </div>
+        </section>
+    
+        <section class="material">
+            <div>
+                <label for="material">Elige un material:</label><br> 
+                <select name="material" id="material" >
+                    <option value="poliestireno">Poliestireno</option>
+                    <option value="acrilico">Acrilico</option>
+                    <option value="lamina">Lamina</option>
+                </select>
+    
+            </div>
+           
+        </section>
+    
+        <section class="medidas">
+            <div>
+                <label for="">Dimensiones:</label><br><br>
+                <label for="ancho" >Ancho</label><br>
+                <input name="ancho"  type="number" id="ancho"> <br><br>
+                <label for="largo">Largo</label><br>
+                <input name="largo" type="number" id="largo"> <br> <br>
+                <label for="cantidad">Cantidad</label><br>
+                <input name="cantidad" type="number" id="cantidad">
+
+            </div>
+        
+        </section>
+
+       
+    
+        <section class="costum">
+            <div>
+                <label for="costum">Algun requerimiento?:</label> <br>
+                <select name="costum" id="costum" >
+                    <option value="ninguno">ninguno</option>
+                    <option value="logo">logo</option>
+                    <option value="diseno personalizado">diseno personalizado</option>
+                    <option value="entrega inmediata">entrega inmediata</option>
+                </select>
+
+            </div>
+        </section>
+
+        <div class="buttonFactura">
+            <button id="cotizar" class="cotizar" onclick="cotizar();"> Cotizar</button>
+        </div>
+            <table id="factura">
+        
+            </table> 
+            
+            <h3 id="total"></h3>
+
+        
+
+        
+
+    </main>
+
+    <footer>
+        <div>
+            <ul>
+                <a href="">Terminos y Condiciones</a> 
+                <a href="">Politica de Privacidad</a> 
+                <a href="">Descarga de Responsabilidad</a> 
+                <a href="">Aviso de Copyright</a>
+               
+            </ul>
+            <ul>
+                <li>Correo:</li>
+                <li class="info">jopavisos@gmail.com</li>
+            </ul>
+            <ul>
+                <li>Telefono:</li>
+                <li class="info">304 608 3830 - 319 350 7948 311 239 3691</li>
+            </ul>
+            <ul>
+                <li>Direccion:</li>
+                <a href="" class="info">Calle 17 # 12-40 Bogota D.C. - Colombia</a>
+            </ul>
+            
+        </div>
+        <p>Copyright © 2020 JOP Avisos | Powered by Astra WordPress Theme</p>
+        
+    </footer>
+    
+    
+</body>
+</html>

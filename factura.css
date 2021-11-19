@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #E6E6E6;
+    font-family: system-ui, system-ui, sans-serif;
+    font-size: 81%;
+    color: #101010;
+    
+}
+main{
+    top: 4px;
+    transform: scale(1) translate(378px, 0px); 
+    margin: 25px auto;
+    overscroll-behavior: none;
+    box-shadow: #ccc 0 4px 6px 2px;
+    /* background-color: #fff; */
+    position: absolute;
+    display: grid;
+    padding: 30px;
+    background-color: white;
+    width: 816px;
+    /* min-width: 60vw; */
+    height: 1056px;
+    text-indent: 0px;
+   /*  margin: 30px auto; */
+   
+}
+
+section{
+    width: 90%;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .encabezado{
+    text-align: center;
+}
+header img {
+    height: 150px;
+    width: 185px;
+}
+.user-data table {
+    height:25px;
+    width:37vw;
+    border-collapse:collapse;
+}
+.user-data table table tr {
+    border-top: 0px;
+    border-collapse: collapse;
+}
+.user-data .fechas-table {
+    width: 227px;
+    text-align: center;
+}
+.user-data tr {
+    height: 18.5px;
+}
+.user-data tr td {
+    width: 30vw;
+    border: 1px solid #aaaaaa;
+}
+.user-data tr th {
+    
+    min-width: 150px;
+    background-color: #aaaaaa;
+    margin: 0px;
+   
+}
+.user-data{
+    display: flex;
+    width: 90%;
+}
+.items  {
+    border-collapse:collapse;
+}
+.items tr th {
+    width: 15vw;
+    background-color: #aaaaaa;
+    border-collapse: collapse;
+   
+}
+.items tr td {
+    height: 30vh;
+    border: 1px solid #aaaaaa ;
+    border-collapse:inherit;
+}
+
+.qr {
+    margin-bottom:50px ;
+    
+
+}
+.footer {
+    display: grid;
+    grid-template-areas: "legal total"
+                         "firmas  firmas";
+    grid-template-columns: 70% 30%;
+    justify-items: center;
+}
+.legal{
+    grid-area: legal;
+    padding: 50px 0 30px 0;
+    
+}
+.legal .legal__p {
+    padding: 20px 0 20px 0;
+
+}
+
+.firmas{
+    grid-area: firmas;
+    margin-top: 1px solid black;
+
+    display: flex;
+}
+.firmas p  {
+    padding: 25px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-top: 1px solid black;
+    justify-items: end;
+}
+.totales{
+    grid-area: total;
+   
+}
+.totales table {
+    
+    border-collapse: collapse;
+    width: 250px;
+    justify-content: end;
+}
+.totales table tr td {
+    text-align-last: end;
+}
+.total  {
+    width: 300px;
+    background-color: #aaaaaa;
+    text-align-last: end;
+    font-weight: bold;
+    
+}

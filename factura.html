@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura JOP</title>
+    <link rel="stylesheet" href="factura.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./factura.js"></script>
+    <script src="jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+        <main id="factura">
+               <!--  <header>
+                    <img src="./logoSegInd.png" alt="Logo de jopavisos">
+                    
+                    <p class="encabezado">
+                        <b>Rosa Maria Barbosa Garavito</b> <br>
+                        Direccion: Calle 17 # 12-40, Ciudad: Bogota, D.C., Departamento: <br>
+                        Bogota D.C. <br>
+                        Tel: +57 3046083830 <br>
+                        jopavisos.com <br>
+                        jopavisos@gmail.com
+                    </p>
+                    <p class="last-child">
+                        Cuenta de cobro <br>
+                        <b> No. 5345</b> <br>
+                        No responsable de IVA <br>
+                        Cuenta de cobro original
+                    </p>
+                </header> -->
+               <!--  <section class="user-data" id="user-data">
+                    <div>
+                        <table class="user-data-table">
+                            <tr>
+                                <th>SENOR(ES)</th>
+                                <td class="senores"></td>
+                            
+                            </tr>
+                            <tr>
+                                <th>DIRECCION</th>
+                                <td class="direccion"></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                            
+                            <div>
+                                <table>
+                                    <tr>   
+                                        <th>TELEFONO</th>
+                                        <td></td>
+                                        <th>NIT</th>
+                                        <td></td>
+                                    </tr>
+        
+                                </table>
+                              
+                            </div>
+                           
+                        </table>
+                    </div>
+                    <div class="fechas">
+                        <table class="fechas-table">
+                            <tr>
+                                <th>FECHA DE EXPEDICION (DD/MM/AA)</th>
+                            </tr>
+                            <tr>
+                                <td>28/04/2021</td>
+                            </tr>
+                           
+                            <tr>
+                                <th>FECHA DE VENCIMIENTO (DD/MM/AA)</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>09/30/2021</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </section>
+                <section>
+                    <table class="items">
+                        <tr>
+                            <th>Item</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Descuento</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table> -->
+                    <section class="qr">
+                        <p>Moneda: COP</p>
+                        <p>Fecha y hora de expedicion :</p>
+                        <p>Medio de pago: Instrumento no definido</p>
+                    </section>
+                    <section class="footer" id="footer">
+                        <div class="legal">
+                            <p class="legal__p">Esta factura se asimila en todos sus efectos a una letra de cambio de conformidad con el Art.774 del codigo de comercio. Autorizo que en caso de incumplimiento de esta obligacion sea reportado a las centrales de riesgo, se cobraran intereses por mora.</p>
+                             <div class="firmas">
+                                <p class="p">ELABORADO POR</p>
+                                <p class="p">ACEPTADA, FIRMA Y/O SELLO Y FECHA</p>
+                            </div> 
+                        </div>
+                        
+                        <div class="totales">
+                            <table>
+                                <tr>
+                                    <td>Subtotal</td> 
+                                    <td>2855</td>
+                                </tr>
+                                <tr class="total">
+                                    <td>Total</td>
+                                    <td>584445</td>
+                                </tr>
+                            </table>
+                        </div> 
+                    </section>
+                </section>
+        
+                <button id="btnCrearPdf" onclick="generarPDF()">Descargar en PDF</button>
+        
+    </main>
+</body>
+<script>
+    
+    
+       
+     function  generarPDF() {       
+       
+    const elementoAConvertir = document.getElementById('factura');
+    html2pdf()
+  
+
+    .set({
+        margin:1,
+        filename: 'factura.pdf',
+        image:{
+            type: 'jpeg',
+            quality:0.98
+        },
+        html2canvas: {
+            scale: 3,
+            letterRendering:true,
+            
+        },
+        jsPDF: {
+            unit:"in",
+            format:"a4",
+            orientatin:'portrait'
+        }
+        
+    })
+    .from(elementoAConvertir)
+    .save()
+    .catch(err => console.log(err))
+    .finally()
+    .then(() => {
+        console.log('guardado')
+    })
+}
+
+</script>
+</html>
